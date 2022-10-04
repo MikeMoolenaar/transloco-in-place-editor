@@ -1,22 +1,24 @@
-const {AngularWebpackPlugin} = require('@ngtools/webpack/src/ivy/plugin');
-const path = require('path');
+import { AngularWebpackPlugin, AngularWebpackPluginOptions } from '@ngtools/webpack';
+import * as path from "path";
+import { Configuration } from 'webpack';
 
-// TODO use Typescript
-
-module.exports = (config, options, targetOptions) => {
-  config.module.rules.push(
+const func = (config: Configuration, options: any, targetOptions: any) => {
+  config.module?.rules?.push(
     {
       test: /\.html$/,
       loader: path.resolve('./custom-webpack-loader.js')
+
     },
   );
 
-  const angularWebpackPlugin = config.plugins.find(p => p instanceof AngularWebpackPlugin);
+  const angularWebpackPlugin: any = config.plugins?.find((p: any) => p instanceof AngularWebpackPlugin);
   if (angularWebpackPlugin) {
-    angularWebpackPlugin.pluginOptions.directTemplateLoading = false;
+    (angularWebpackPlugin.pluginOptions as AngularWebpackPluginOptions).directTemplateLoading = false;
   }
   return config;
 };
+
+export default func;
 
 /*
 References:
