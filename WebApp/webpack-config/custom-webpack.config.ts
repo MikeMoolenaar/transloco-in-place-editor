@@ -6,11 +6,9 @@ const func = (config: Configuration, options: any, targetOptions: any) => {
   config.module?.rules?.push(
     {
       test: /\.html$/,
-      loader: path.resolve('./custom-webpack-loader.js')
-
+      loader: path.resolve('./webpack-config/dist/custom-webpack-loader.js')
     },
   );
-
   const angularWebpackPlugin: any = config.plugins?.find((p: any) => p instanceof AngularWebpackPlugin);
   if (angularWebpackPlugin) {
     (angularWebpackPlugin.pluginOptions as AngularWebpackPluginOptions).directTemplateLoading = false;
@@ -18,7 +16,7 @@ const func = (config: Configuration, options: any, targetOptions: any) => {
   return config;
 };
 
-export default func;
+export = func;
 
 /*
 References:

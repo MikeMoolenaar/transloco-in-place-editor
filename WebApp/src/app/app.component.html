@@ -1,8 +1,8 @@
-<ng-container *translocoCustom="let t">
+<ng-container *transloco="let t">
   <span>
     <p>{{ t('Messages.Welcome') }}</p>
   </span>
-<!--  <p>{{ t('Messages.Idk') }}</p>-->
+  <h1>{{ t('Messages.Welcome') }}</h1>
   <button (click)="switchLang()">Switch languages</button>
   {{ translocoService.getActiveLang() }}
 </ng-container>

@@ -1,9 +1,10 @@
 {
-  "extends": "../tsconfig.json",
   "compileOnSave": true,
   "compilerOptions": {
     "outDir": "./dist",
     "module": "commonjs",
-    "sourceMap": false
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "strict": true
   }
 }
