@@ -1,0 +1,6 @@
+<div *ngFor="let element of elements" (mouseenter)="mouseEnter(element)" (mouseleave)="mouseLeave(element)">
+  <p>{{element.textOld}} -> {{element.textNew}}</p>
+  <button (click)="revert(element)">Revert</button>
+</div>
+<br>
+<button *ngIf="elements.length">Submit</button>

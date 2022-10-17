@@ -1,6 +1,7 @@
 {
   "Messages": {
     "Welcome": "Welcome!",
-    "Goodbye": "Bye!"
+    "Goodbye": "Bye!",
+    "SomethingElse": "Somnething else"
   }
 }

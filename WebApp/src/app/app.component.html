@@ -1,8 +1,9 @@
 <ng-container *transloco="let t">
   <span>
-    <p>{{ t('Messages.Welcome') }}</p>
+    <p data-transloco-key="Messages.Welcome">{{ t('Messages.Welcome') }}</p>
   </span>
-  <h1>{{ t('Messages.Welcome') }}</h1>
+  <h1 data-transloco-key="Messages.SomethingElse">{{ t('Messages.SomethingElse') }}</h1>
   <button (click)="switchLang()">Switch languages</button>
   {{ translocoService.getActiveLang() }}
 </ng-container>
+<app-key-editor-overlay></app-key-editor-overlay>

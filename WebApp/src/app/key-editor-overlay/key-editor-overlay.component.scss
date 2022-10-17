@@ -1,0 +1,19 @@
+:host {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  background: lightgrey;
+  margin: .3rem .3rem 0 0;
+  border-radius: 5px;
+  padding: 5px;
+
+  font-size: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin-top: 0.3rem;
+}
